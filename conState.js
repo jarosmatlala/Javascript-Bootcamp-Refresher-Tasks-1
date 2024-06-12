@@ -159,15 +159,53 @@ while (num2 < 50) {
 }
 
 
+//EXCERCISE 5
+
 //Do while
 
-console.log("\nExercise 5: Do While loop");
-let x = 1;
+console.log(" Print numbers from 1 to 10");
+let i = 1;
+
+while (i <= 10) {
+    console.log(i);
+    i++;
+}
+
+//  Calculate the sum of all numbers from 1 to 100
+
+console.log("\nTask 2: Calculate the sum of all numbers from 1 to 100 and print the result");
+let sumS = 0;
+let j = 1;
+
+while (j <= 100) {
+    sumS += j;
+    j++;
+}
+
+console.log("The sum of all numbers from 1 to 100 is:", sumS);
+
+// QUESTION 5
+
+// Generate a random number between 1 and 10
+const correctNumber = Math.floor(Math.random() * 10) + 1;
+let guess;
 
 do {
-    console.log(x);
-    x++;
-} while (x <= 5);
+    // Ask user to guess a number
+    guess = prompt("Guess a number between 1 and 10:");
+    guess = Number(guess); // Convert the input to a number
+
+    if (guess < correctNumber) {
+        alert("Too low! Try again.");
+    } else if (guess > correctNumber) {
+        alert("Too high! Try again.");
+    } else if (guess === correctNumber) {
+        alert("Congratulations! You guessed the correct number.");
+    } else {
+        alert("Invalid input. Please enter a number between 1 and 10.");
+    }
+} while (guess !== correctNumber);      
+
 
 
 
